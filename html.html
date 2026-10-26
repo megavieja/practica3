@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let palabra =prompt ("Cual es tu palabra: ");
+        let reversa= palabra.length;
+        let aux = 0;
+        let aux2 = 0;
+
+        function yea (palabra,palabra2 , letras){
+        for (let letra of palabra){
+            if (toLowerCase(letra) == toLowerCase(letras) ){
+                aux= aux+1;
+                
+            }
+            
+        }
+           for (let letra of palabra2){
+            if (toLowerCase(letra) == toLowerCase(letras) ){
+                aux2= aux2+1;
+                
+            }
+            
+        }
+
+        if (aux>aux2){
+            return palabra;
+
+        } else {
+            return palabra2;
+        }
+        
+        }
+        
+            console.log("la primera letra es: " + yea(palabra, "mondongo", "a"));
+
+
+        
+          
+
+        
+        
+
+
+
+    </script>
+</body>
+</html>
