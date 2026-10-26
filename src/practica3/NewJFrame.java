@@ -3,6 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package practica3;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 /**
  *
@@ -17,6 +19,7 @@ public class NewJFrame extends javax.swing.JFrame {
      */
     public NewJFrame() {
         initComponents();
+        Pver = new PanelVer();
     }
 
     /**
@@ -70,11 +73,17 @@ public class NewJFrame extends javax.swing.JFrame {
 
     private void verclienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_verclienteActionPerformed
         System.out.println("Menu ver");
+        this.setContentPane(new PanelVer());
+        this.pack();
+        
     }//GEN-LAST:event_verclienteActionPerformed
 
     private void altaclienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_altaclienteActionPerformed
         // TODO add your handling code here:
-        this.setContentPane(new PanelVer());
+        PanelVer mondongo = new PanelVer();
+                 
+         this.getContentPane().removeAll();
+        this.getContentPane().add(mondongo);
     }//GEN-LAST:event_altaclienteActionPerformed
 
     /**
@@ -101,6 +110,8 @@ public class NewJFrame extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> new NewJFrame().setVisible(true));
     }
+    private PanelVer Pver;
+   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu alta;
